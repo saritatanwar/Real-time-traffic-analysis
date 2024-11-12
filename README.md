@@ -7,11 +7,17 @@
 - **Data Points**: Time, location (latitude/longitude), weather, severity, etc.
 
 ## Real-Time Data Capture Mechanisms
-- **Metadata Fields**: Timestamps, location, weather data to track real-time accident occurrence.
-- **Methods for Real-Time Data**:
-  - **Traffic APIs**: HERE Traffic, Ontario 511.
-  - **Streaming Tools**: Kafka or Kinesis for continuous data ingestion.
-  - **Data Aggregation**: Integrate historical accident data with real-time feeds for a comprehensive analysis.
+
+The US Accident dataset from Kaggle is classified as a "live" dataset, with metadata fields that ensure its real-time relevance. Key metadata fields supporting this are:
+
+- **Timestamps**: Each entry includes a timestamp showing the date and time of the accident, regularly updated to reflect recent incidents.
+- **Location Data**: The latitude and longitude coordinates allow for precise location tracking of each accident, useful for mapping current traffic issues.
+- **Weather and Road Conditions**: Metadata fields such as weather status and road conditions at the accident time suggest live or recently captured environmental factors.
+- **Data Feed Status**: An indicator of the data feed status shows whether the connection is active, ensuring the dataset receives ongoing updates.
+- **Update Frequency**: The dataset’s metadata suggests updates every [specify frequency if known], ensuring data remains live and current for real-time analysis.
+
+This metadata framework ensures that the dataset remains relevant for live analysis, capturing traffic accidents as they occur with real-time environmental details.
+
 
 ## Tools and Technologies
 - **Data Manipulation**: Python, Pandas, NumPy.
